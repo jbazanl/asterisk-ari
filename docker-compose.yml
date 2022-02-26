@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+
+  ####################### api ###############################
+  asterisk-ari:
+    container_name: asterisk-ari
+    restart: always
+    build:
+        context: ./
+        dockerfile: Dockerfile
+    command: npm start
+    volumes:
+      - ./:/nodejs/test/
+    ports:
+      - 7000:7000
+
