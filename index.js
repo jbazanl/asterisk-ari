@@ -66,7 +66,7 @@ const startServer = async ari => {
           json_data[original_number]['Originate'] = channel.name
           json_data[original_number]['StasisStart'] = {}
           json_data[original_number]['StasisStart']['ChannelID'] = channel.name
-          json_data[original_number]['StasisStart']['CallerNumber'] = channel.caller.number
+          json_data[original_number]['StasisStart']['CallerNumber'] = ''
           json_data[original_number]['StasisStart']['CreationTime'] = channel.creationtime
         })
         .catch(function (err) {
