@@ -97,9 +97,11 @@ const startServer = async ari => {
         json_data[original_number]['StasisStart']['CreationTime'] = channelInstance.creationtime
         var stasis_time = new Date()
         console.log(stasis_time);
-        channelInstance.hangup(err => {
-          console.log(`· Hangup Channel ID : ${channelInstance.id}`);
-        });
+        setTimeout(() => {
+          channelInstance.hangup(err => {
+            console.log(`· Hangup Channel ID : ${channelInstance.id}`);
+          });
+        }, 5000);
         //json_data[original_number]['StasisStart']['Exten'] = incoming.dialplan.exten
         //console.log(json_data)
         //return res.json({ json_data }); 
